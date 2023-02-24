@@ -1,0 +1,32 @@
+@import '../styles/vars';
+.cart-footer {
+    display: grid;
+    grid-template-columns: 5fr 3fr 4fr;
+    column-gap: 30px;
+
+    background-color: #eaeff2;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+
+    padding: 19px 0;
+
+    &__count {
+        grid-column-start: 2;
+        @media(max-width: $mobile) {
+            grid-column-start: 1;
+        }
+    }
+
+    @media(max-width: $mobile) {
+        padding: 0 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    @media(max-width: $mobile-xs) {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+
+}
